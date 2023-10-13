@@ -28,25 +28,17 @@ $ docker build -t docker_image_igfnet .
 * Download the dataset
 ```
 $ (You should be in the IGFNet folder)
-$ mkdir ./dataset
-$ cd ./dataset
+$ mkdir ./datasets
+$ cd ./datasets
 $ (download our preprocessed dataset.zip in this folder)
 $ unzip -d .. dataset.zip
 ```
 * To reproduce our results, you need to download our pretrained weights.
 ```
 $ (You should be in the IGFNet folder)
-$ mkdir ./weights_backup/IGFNet
-$ cd ./weights_backup/IGFNet
-$ docker run -it --shm-size 8G -p 1234:6006 --name docker_container_mafnet --gpus all -v ~/IGFNet:/workspace docker_image_igfnet
-$ (currently, you should be in the docker)
-```
-The results will be saved in the `./runs` folder.
-* To train IGFNet
-```
-$ (You should be in the IGFNet folder)
-$ docker run -it --shm-size 8G -p 1234:6006 --name docker_container_mafnet --gpus all -v ~/IGFNet:/workspace docker_image_igfnet
-$ (currently, you should be in the docker)
+$ mkdir ./pretrained
+$ cd ./pretrained
+$ docker run -it --shm-size 8G -p 1234:6006 --name docker_container_igfnet --gpus all -v ~/IGFNet:/workspace docker_image_igfnet
 $ cd /workspace
 $ python3 train.py
 ```
