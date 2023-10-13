@@ -1,6 +1,10 @@
 # IGFNet-Pytorch
 The official pytorch implementation of **IGFNet: Illumination-Guided Fusion Network for Semantic Scene Understanding using RGB-Thermal Images**.
 We test our code in Python 3.6.9, CUDA 11.1, cuDNN 8, and PyTorch 1.10.1.
+<div align=center>
+<img src="docs/overview.pdf" width="900px"/>
+</div>
+
 
 # Introduction
 IGFNet introduces an interpretable RGB-Thermal fusion network and utilize illumination to guide the fusion of multi-modal features, which includes an Illumination Estimation Module (IEM) and an Illumination-Guided-Cross-Modal Rectification Module (IGCM-RM).
