@@ -17,3 +17,8 @@ RUN pip3 install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.
 RUN pip3 install torchsummary
 RUN pip3 install tensorboard==2.11.0
 RUN pip3 install einops
+RUN pip3 install easydict
+RUN pip3 install six
+RUN pip3 install timm
+RUN pip3 uninstall -y Pillow
+RUN pip3 install Pillow==9.5.0
