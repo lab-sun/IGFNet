@@ -22,7 +22,7 @@ from config import config
 #############################################################################################
 parser = argparse.ArgumentParser(description='Train with pytorch')
 ############################################################################################# 
-parser.add_argument('--model_name', '-m', type=str, default='CMX_mit_b2')
+parser.add_argument('--model_name', '-m', type=str, default='IGFNet_mit_b2')
 parser.add_argument('--batch_size', '-b', type=int, default=config.batch_size)
 parser.add_argument('--lr_start', '-ls', type=float, default=config.lr)
 parser.add_argument('--gpu', '-g', type=int, default=0)
@@ -231,15 +231,15 @@ if __name__ == '__main__':
     lr_policy = WarmUpPolyLR(base_lr, config.lr_power, total_iteration, config.niters_per_epoch * config.warm_up_epoch)
 
     # preparing folders
-    if os.path.exists("./CMX_mit_b2"):
-        shutil.rmtree("./CMX_mit_b2")
-    weight_dir = os.path.join("./CMX_mit_b2", args.model_name)
+    if os.path.exists("./runs"):
+        shutil.rmtree("./runs")
+    weight_dir = os.path.join("./runs", args.model_name)
     os.makedirs(weight_dir)
 
     os.chmod(weight_dir, stat.S_IRWXO)  # allow the folder created by docker read, written, and execuated by local machine
-    writer = SummaryWriter("./CMX_mit_b2/tensorboard_log")
-    os.chmod("./CMX_mit_b2/tensorboard_log", stat.S_IRWXO)  # allow the folder created by docker read, written, and execuated by local machine
-    os.chmod("./CMX_mit_b2", stat.S_IRWXO)
+    writer = SummaryWriter("./runs/tensorboard_log")
+    os.chmod("./runs/tensorboard_log", stat.S_IRWXO)  # allow the folder created by docker read, written, and execuated by local machine
+    os.chmod("./runs", stat.S_IRWXO)
 
     print('training %s on GPU #%d with pytorch' % (args.model_name, args.gpu))
     print('from epoch %d / %s' % (args.epoch_from, args.epoch_max))
