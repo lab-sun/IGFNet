@@ -8,6 +8,9 @@ IGFNet introduces an interpretable RGB-Thermal fusion network and utilize illumi
 # Dataset
 The dataset can be downloaded from the MFNet project [page](https://www.mi.t.u-tokyo.ac.jp/static/projects/mil_multispectral/).
 
+# Pretrained weights
+The pretrained weight of IGFNet can be downloaded from [here](https://drive.google.com/file/d/1ibHI_x0dS0d2g7CGY4kMfQd58z_sapZv/view?usp=drive_link)
+
 # Acknowledgement
 Some of the codes are borrowed from [CMX](https://github.com/huaaaliu/RGBX_Semantic_Segmentation)
 
