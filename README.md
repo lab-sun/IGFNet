@@ -56,7 +56,3 @@ Note: Please change the smoothing factor in the Tensorboard webpage to `0.999`, 
 
 # Acknowledgement
 Some of the codes are borrowed from [CMX](https://github.com/huaaaliu/RGBX_Semantic_Segmentation)
-
-Contact: yx.sun@polyu.edu.hk
-
-Website: https://yuxiangsun.github.io/
