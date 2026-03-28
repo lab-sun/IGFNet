@@ -6,7 +6,6 @@ We test our code in Python 3.6.9, CUDA 11.1, cuDNN 8, and PyTorch 1.10.1.
 <img src="docs/overview.png" width="900px"/>
 </div>
 
-
 # Introduction
 IGFNet introduces an interpretable RGB-Thermal fusion network and utilize illumination to guide the fusion of multi-modal features, which includes an Illumination Estimation Module (IEM) and an Illumination-Guided-Cross-Modal Rectification Module (IGCM-RM).
 
@@ -53,6 +52,18 @@ $ (fire up your favorite browser with http://localhost:1234, you will see the te
 ```
 The results will be saved in the `./runs` folder.
 Note: Please change the smoothing factor in the Tensorboard webpage to `0.999`, otherwise, you may not find the patterns from the noisy plots. If you have the error `docker: Error response from daemon: could not select device driver`, please first install [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) on your computer!
+
+# Citation
+```
+@INPROCEEDINGS{li2023igfnet,
+  author={Haotian Li and Yuxiang Sun},
+  booktitle={2023 IEEE International Conference on Robotics and Biomimetics (ROBIO)}, 
+  title={IGFNet: Illumination-Guided Fusion Network for Semantic Scene Understanding using RGB-Thermal Images}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-6}}
+```
 
 # Acknowledgement
 Some of the codes are borrowed from [CMX](https://github.com/huaaaliu/RGBX_Semantic_Segmentation)
